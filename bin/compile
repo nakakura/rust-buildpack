@@ -32,9 +32,9 @@ if [ -d "$buildpack_dir/dependencies" ]; then
     popd
 else
     # Install Rust from internet
-    echo "-----> Installing latest stable Rust from rustup"
+    echo "-----> Installing latest nightly Rust from rustup"
     rust_installation_url="https://sh.rustup.rs"
-    $CURL -sSf $rust_installation_url | sh -s -- -y --default-toolchain stable 2>&1
+    $CURL -sSf $rust_installation_url | sh -s -- -y --default-toolchain nightly 2>&1
 fi
 
 export PATH=$HOME/.cargo/bin/:$PATH
