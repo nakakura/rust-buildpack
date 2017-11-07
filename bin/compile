@@ -44,7 +44,7 @@ echo "-----> Running 'cargo build'"
 cd $build_dir
 cargo build --release 2>&1
 mkdir -p /home/vcap/bin
-cargo install --root /home/vcap/bin diesel_cli 
+cargo install --root /home/vcap/app diesel_cli 
 
 # Ensure compiled Rust program is in runtime environment PATH
 mkdir -p $build_dir/.profile.d
